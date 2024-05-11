@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/notesHeading"
+        android:id="@+id/tasksHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +22,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesRecyclerView"
+        android:id="@+id/tasksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
