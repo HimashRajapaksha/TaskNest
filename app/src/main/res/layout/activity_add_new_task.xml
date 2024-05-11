@@ -46,7 +46,7 @@
         android:id="@+id/taskContentEditText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Enter Task Description"
+        android:hint="Enter Task's Description"
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"
