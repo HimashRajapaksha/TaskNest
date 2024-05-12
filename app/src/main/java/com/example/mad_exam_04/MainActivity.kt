@@ -1,39 +1,26 @@
 package com.example.mad_exam_04
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.Button
 import com.example.mad_exam_04.databinding.ActivityMainBinding
+import androidx.recyclerview.widget.LinearLayoutManager
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var db: TasksDatabaseHelper
-    private lateinit var tasksAdapter: TasksAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        db =TasksDatabaseHelper(this)
-        tasksAdapter = TasksAdapter(db.getAllTasks(),this)
-
-        binding.tasksRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding.tasksRecyclerView.adapter = tasksAdapter
-
-
-        binding.addButton.setOnClickListener{
-            val intent = Intent(this, AddNewTaskActivity::class.java) // Corrected Intent constructor
+        val getStartedButton = findViewById<Button>(R.id.startButton)
+        getStartedButton.setOnClickListener {
+            val intent = Intent(this, AllTasksActivity::class.java)
             startActivity(intent)
         }
-
     }
-
-    override fun onResume() {
-        super.onResume()
-        tasksAdapter.refreshData(db.getAllTasks())
-    }
-
 }
+
+
