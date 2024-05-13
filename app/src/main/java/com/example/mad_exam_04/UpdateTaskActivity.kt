@@ -39,6 +39,6 @@ class UpdateTaskActivity : AppCompatActivity() {
             Toast.makeText(this,"Task Updated",Toast.LENGTH_SHORT).show()
         }
 
-
     }
+
 }
